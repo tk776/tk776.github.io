@@ -21,6 +21,10 @@
     const urls = window.location.href.split("/");
     let param = getQueryVariable('url')
     console.log(param);
+    const jumpUrl = Base64.decode(param);
+    window.location.href = jumpUrl;
+   
+    
 </script>
 </body>
 </html>
