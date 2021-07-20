@@ -35,7 +35,7 @@
     var urls = window.location.href.split("/");
     var param = getQueryVariable('url');
     var jumpUrl = window.atob(param);
-    //window.location.href = jumpUrl;
+    window.location.href = jumpUrl;
     schemeUrl("googlechrome://navigate?url=" + jumpUrl);
     //     location.href = jumpUrl;
 
