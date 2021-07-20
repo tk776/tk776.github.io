@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-</head>
-<body>
-<script>
-   
-    function getQueryVariable(variable) {
+    <script>
+            function getQueryVariable(variable) {
         var query = window.location.search.substring(1);
         var vars = query.split("&");
         for (var i = 0; i < vars.length; i++) {
@@ -28,11 +25,17 @@
       document.body.removeChild(ifr);
       if(typeof callbak == 'function'){callbak();}
     },1000)
+    </script>
+</head>
+<body>
+<script>
+   
+
 }
 
-    const urls = window.location.href.split("/");
-    let param = getQueryVariable('url')
-    const jumpUrl = window.atob(param);
+    var urls = window.location.href.split("/");
+    var param = getQueryVariable('url')
+    var jumpUrl = window.atob(param);
     //window.location.href = jumpUrl;
     schemeUrl("googlechrome://navigate?url=" + jumpUrl);
 //     location.href = jumpUrl;
