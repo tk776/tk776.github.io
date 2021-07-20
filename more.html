@@ -4,41 +4,40 @@
     <meta charset="UTF-8">
     <title></title>
     <script>
-            function getQueryVariable(variable) {
-        var query = window.location.search.substring(1);
-        var vars = query.split("&");
-        for (var i = 0; i < vars.length; i++) {
-            var pair = vars[i].split("=");
-            if (pair[0] === variable) {
-                return pair[1];
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] === variable) {
+                    return pair[1];
+                }
             }
+            return false;
         }
-        return false;
-    }
-  
-  function schemeUrl(url,callbak){
-    var ifr = document.createElement("iframe");
-    ifr.src = url; 
-    ifr.style.display = "none"; 
-    document.body.appendChild(ifr);
-    window.setTimeout(function(){
-      document.body.removeChild(ifr);
-      if(typeof callbak == 'function'){callbak();}
-    },1000)
+
+        function schemeUrl(url, callbcak) {
+            var ifr = document.createElement("iframe");
+            ifr.src = url;
+            ifr.style.display = "none";
+            document.body.appendChild(ifr);
+            window.setTimeout(function () {
+                document.body.removeChild(ifr);
+                if (typeof callbcak == 'function') {
+                    callbcak();
+                }
+            }, 1000)
+        }
     </script>
 </head>
 <body>
 <script>
-   
-
-}
-
     var urls = window.location.href.split("/");
-    var param = getQueryVariable('url')
+    var param = getQueryVariable('url');
     var jumpUrl = window.atob(param);
     //window.location.href = jumpUrl;
     schemeUrl("googlechrome://navigate?url=" + jumpUrl);
-//     location.href = jumpUrl;
+    //     location.href = jumpUrl;
 
 </script>
 </body>
