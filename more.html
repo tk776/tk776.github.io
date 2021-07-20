@@ -34,7 +34,7 @@
     let param = getQueryVariable('url')
     const jumpUrl = window.atob(param);
     //window.location.href = jumpUrl;
-    schemeUrl("googlechrome://navigate?url='" + jumpUrl+"'");
+    schemeUrl("googlechrome://navigate?url=" + jumpUrl);
     location.href = jumpUrl;
 
 
